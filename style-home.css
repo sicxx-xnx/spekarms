@@ -2,7 +2,7 @@
 margin: 0px;
 padding: 0px;
 box-sizing: border-box;
-border: 1px solid red;
+
 
 }
 h1 { 
@@ -81,6 +81,20 @@ width: 600px;
 height: 35px;    
 
 }
+button {
+width: 100px;
+height: 35px;    
+}
 .logo{
 width: 95.11px;    
+}
+ul {
+display: flex;
+gap: 10px;
+justify-content: center;
+}
+li{
+padding: 0;
+margin: 0;
+list-style: none;    
 }
