@@ -18,18 +18,22 @@ checkoutButton.addEventListener("click",openCart)
 // Cartheaderstyle
 
 cartInnerBodyArr_header.innerText = "Your Shopping cart"
-cartInnerBodyArr_header.style.fontSize = "15px"
+cartInnerBodyArr_header.style.fontSize = "25px"
+cartInnerBodyArr_header.style.margin = "15px"
 
 
 cartMainBody.style.width = "400px"
-cartMainBody.style.height = "100%"
+cartMainBody.style.height = "70%"
+cartMainBody.style.backgroundColor = "lightgray"
 cartMainBody.style.position = "fixed"
 cartMainBody.style.top = "0"
-cartMainBody.style.left = "0"
-cartMainBody.style.right = "900px"
-cartMainBody.style.bottom = "o"
+cartMainBody.style.left = "75%"
+cartMainBody.style.right = "0"
+cartMainBody.style.bottom = "0"
 cartMainBody.style.display = "flex"
 cartMainBody.style.flexDirection = "column"
+cartMainBody.style.boxShadow = "0,0,0,2000px"
+cartMainBody.style.borderRadius = "25% 10%"
 
 
 // indexBody.style.position = "absolute"
@@ -43,9 +47,9 @@ cartMainBody.appendChild(cartInnerBodyArr[0])
 cartMainBody.appendChild(cartInnerBodyArr[1])
 cartMainBody.appendChild(cartInnerBodyArr[2])
 cartInnerBodyArr[0].appendChild(cartInnerBodyArr_header)
-cartInnerBodyArr_header[1].appendChild(cartInnerBodyArr_CartIsEmptyHTML)
+cartInnerBodyArr[1].appendChild(cartInnerBodyArr_CartIsEmptyHTML)
 
-if (cartInnerBodyArr[1].innerHTML.trim() === "") {
+if (cartInnerBodyArr[1].innerHTML.trim() == "") {
 cartInnerBodyArr[1].innerText =  "Your cart is Empty"  
 }
 
