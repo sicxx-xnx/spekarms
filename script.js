@@ -1,8 +1,8 @@
-allItems = [
-{id: 1,name: "something", price: 65, itemcount: 0, }
+let allItems = [
+{id: 1,name: "something", price: 65, itemcount: 0, quanity: 100 }
 ]
-cartItems = []
-matchitem = []
+let cartItems = []
+let matchItem = []
 const indexBody = document.querySelector("body")
 const cartMainBody = document.createElement("div")
 const cartInnerBodyArr = [document.createElement("div"),document.createElement("div"),document.createElement("div")]
@@ -40,7 +40,7 @@ cartMainBody.style.bottom = "0"
 cartMainBody.style.display = "flex"
 cartMainBody.style.flexDirection = "column"
 cartMainBody.style.boxShadow = "0,0,0,2000px"
-cartMainBody.style.borderRadius = "25% 10%"
+
 
 
 // indexBody.style.position = "absolute"
@@ -66,33 +66,43 @@ cartItemContainer.innerText =  "Your cart is Empty"
 }
 
 
-// allItems = [
-// {id: 1,name: "something", price: 65, itemcount: 0, }
-// ]
-// cartItems = []
-// matchitem = []
-function addtoCart(productid) {
-// let cartindex = cartItems.findindex((item) => item.id === productid)
-// if (cartindex !== -1) {
-// cartItems[cartindex].itemcount++    
-// } else {
-let matchitems = allItems.find((x) => x.id === productid)
-cartItems.push(matchitems)
-cartItems.forEach((item) => {
-    li = document.createElement("div");
 
-    const nameElement = document.createElement("p");
-    nameElement.innerText = `Name: ${item.name}`;
+function addToCart(productId) {
+    let cartIndex = cartItems.findIndex(item => item.id === productId);
 
-    const priceElement = document.createElement("p");
-    priceElement.innerText = `Price: $${item.price}`;
-    cartItemContainer.appendChild(li)
-    li.appendChild(nameElement)
-    li.appendChild(priceElement)
-  
-})}
+    if (cartIndex !== -1) {
+alert("Product is already in Cart")
+    } else {
+        matchedItem = allItems.find(x => x.id === productId);
+        cartItems.push(matchedItem)
+        if (matchedItem.quanity > 0 ) {
+            // Create new cart item UI
+            let li = document.createElement("div");
+            li.style.display = "flex";
+            li.style.justifyContent = "space-between"
+            li.style.gap = "10px"
+            li.style.borderBottom = "medium solid black"
 
-addtoCart(1)
+            const nameElement = document.createElement("p");
+            nameElement.innerText = `${matchedItem.name}`;
+
+            const priceElement = document.createElement("p");
+            priceElement.innerText = `Price: $${matchedItem.price}`;
+
+            const quanityElement = document.createElement("p");
+            quanityElement.innerText = `Quanity ${matchedItem.itemcount + 1}`;
+
+          
+            li.appendChild(nameElement);
+            li.appendChild(priceElement);  
+            li.appendChild(quanityElement)
+            cartItemContainer.appendChild(li);
+        }
+    }
+}
+
+
+addToCart(1)
 
 
 
