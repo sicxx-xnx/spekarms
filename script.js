@@ -13,16 +13,11 @@ const checkoutButton = document.querySelector(".checkout")
 let total ;
 const cartInnerBodyArr_header = document.createElement("h2")
 const cartInnerBodyArr_CartIsEmptyHTML = document.createElement("p")
-<<<<<<< HEAD
 cartInnerBodyArr_CartIsEmptyHTML.innerText = "Your cart is Empty"
 let closecart = document.createElement("img")
 closecart.src = "images/icons8-close.svg"
 closecart.style.height = "24px"
 closecart.style.width = "24px" 
-=======
-// cartInnerBodyArr_CartIsEmptyHTML.innerText = "Your cart is Empty"
-let cartItemPlaceholder = document.createElement("div")
->>>>>>> cart-branch-hotfix
 
 
 
@@ -44,13 +39,8 @@ cartMainBody.style.right = "0"
 cartMainBody.style.bottom = "0"
 cartMainBody.style.display = "none"
 cartMainBody.style.flexDirection = "column"
-<<<<<<< HEAD
 cartMainBody.style.boxShadow = "0 0 0 30px "
 cartMainBody.style.borderRadius = "25% 10%"
-=======
-cartMainBody.style.boxShadow = "0,0,0,2000px"
-
->>>>>>> cart-branch-hotfix
 
 
 // Cartheaderstyle
@@ -84,22 +74,6 @@ cartItemContainer
 //function - open/closecart
 
 function openCart(){
-<<<<<<< HEAD
-if (cartMainBody.style.display = "none") {
-  cartMainBody.style.display = "flex" } 
-// introHTML.insertBefore(cartMainBody,introImage)
-// cartMainBody.appendChild(cartInnerBodyArr[0])
-// cartMainBody.appendChild(cartInnerBodyArr[1])
-// cartMainBody.appendChild(cartInnerBodyArr[2])
-// cartInnerBodyArr[0].appendChild(cartInnerBodyArr_header)
-// cartInnerBodyArr[1].appendChild(cartInnerBodyArr_CartIsEmptyHTML)
-if (cartInnerBodyArr[1].innerHTML.trim() == "") {
-cartInnerBodyArr[1].innerText =  "Your cart is Empty"  
-}
-}
-
-
-=======
 
 introHTML.insertBefore(cartMainBody,introImage)
 cartMainBody.appendChild(cartInnerBodyArr[0])
@@ -158,4 +132,3 @@ addToCart(1)
 
 
 
->>>>>>> cart-branch-hotfix
