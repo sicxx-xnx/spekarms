@@ -13,7 +13,6 @@ const checkoutButton = document.querySelector(".checkout")
 let total ;
 const cartInnerBodyArr_header = document.createElement("h2")
 const cartInnerBodyArr_CartIsEmptyHTML = document.createElement("p")
-cartInnerBodyArr_CartIsEmptyHTML.innerText = "Your cart is Empty"
 let closecart = document.createElement("img")
 closecart.src = "images/icons8-close.svg"
 closecart.style.height = "24px"
@@ -29,46 +28,30 @@ cartMainBody.style.display = "none"
 })
 
 // total cart style
-cartMainBody.style.width = "400px"
-cartMainBody.style.height = "70%"
+cartMainBody.style.width = "15%"
+cartMainBody.style.height = "45%"
 cartMainBody.style.backgroundColor = "lightgray"
 cartMainBody.style.position = "fixed"
-cartMainBody.style.top = "0"
-cartMainBody.style.left = "75%"
-cartMainBody.style.right = "0"
+cartMainBody.style.top = "11%"
+cartMainBody.style.right = "1px"
 cartMainBody.style.bottom = "0"
-cartMainBody.style.display = "none"
+cartMainBody.style.display = "flex"
 cartMainBody.style.flexDirection = "column"
-cartMainBody.style.boxShadow = "0 0 0 30px "
-cartMainBody.style.borderRadius = "25% 10%"
+cartMainBody.style.border = "2px solid black"
+
 
 
 // Cartheaderstyle
 
 cartInnerBodyArr_header.innerText = "Your Shopping cart"
-cartInnerBodyArr_header.style.fontSize = "25px"
-cartInnerBodyArr_header.style.margin = "15px 15px 15px 45px"
+cartInnerBodyArr_header.style.margin = "15px 15px 15px 15px"
+cartInnerBodyArr_header.style.textAlign = "center"
 
 // Top of cart 1st div
 cartInnerBodyArr[0].style.display = "flex"
 cartInnerBodyArr[0].style.justifyContent = "center"
 
 
-
-
-introHTML.insertBefore(cartMainBody,introImage)
-cartMainBody.appendChild(cartInnerBodyArr[0])
-cartMainBody.appendChild(cartInnerBodyArr[1])
-cartMainBody.appendChild(cartInnerBodyArr[2])
-cartInnerBodyArr[0].appendChild(cartInnerBodyArr_header)
-cartInnerBodyArr[0].appendChild(closecart)
-cartInnerBodyArr[1].appendChild(cartInnerBodyArr_CartIsEmptyHTML)
-
-
-// indexBody.style.position = "absolute"
-
-
-cartItemContainer 
 
 
 //function - open/closecart
@@ -82,14 +65,14 @@ cartMainBody.appendChild(cartInnerBodyArr[2])
 cartInnerBodyArr[0].appendChild(cartInnerBodyArr_header)
 cartInnerBodyArr[1].appendChild(cartInnerBodyArr_CartIsEmptyHTML)
 cartInnerBodyArr[1].appendChild(cartItemContainer)
-if (cartItemContainer.innerHTML.trim() == "") {
+if (cartItemContainer.innerHTML === '') {
 cartItemContainer.innerText =  "Your cart is Empty"  
 }
 }
 
 
 
-function addToCart(productId) {
+function addToCart(productId) {   
     let cartIndex = cartItems.findIndex(item => item.id === productId);
 
     if (cartIndex !== -1) {
@@ -103,7 +86,7 @@ alert("Product is already in Cart")
             li.style.display = "flex";
             li.style.justifyContent = "space-between"
             li.style.gap = "10px"
-            li.style.borderBottom = "medium solid black"
+            li.style.borderBottom = "1px solid black"
 
             const nameElement = document.createElement("p");
             nameElement.innerText = `${matchedItem.name}`;
