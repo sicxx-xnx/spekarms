@@ -25,7 +25,7 @@
         <div class="logo"><img src="./images/cropped-Untitled-design.webp" height="45px" width="auto"/></div>
         <div class="search-form"><input type="text" placeholder="What can we help you find today?"/><button>Search</button> </div>
         <div class="icon">
-            <div class="account-icon"><img src="./images/icon-1633249.svg" height="35px" width="auto"/></div>
+            <div class="account-icon" onclick="document.getElementById(`accountLogin`).style.display = 'block'"><img src="./images/icon-1633249.svg" height="35px" width="auto"/></div>
             <div class="checkout"><img src="./images/shopping-cart-371980.svg" height="35px" width="auto"/></div>
         </div>
 
@@ -44,8 +44,27 @@
 
     </div>
 
-</div>    
-<div class="intro">
+</div> 
+<div class="accountLoginContainer" style="position: relative;">
+    <div id="accountLogin" style="width: 40vw; height: fit-content; position: fixed; margin-left: 60% ; overflow: hidden; border: 1px solid black; display: none; z-index: 2;">
+        <form action="" id="login">
+            <fieldset style="display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <label for="userName">username</label>
+                <input type="text" name="userName" id="userName"/>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <label for="password">Password
+                </label><input type="text" name="password" id="password">
+            </div>
+            </fieldset>
+        </form>
+        <button form="login" style="width: 50%;">Login</button><button style="width: 50%;" onclick="location.href = 'Make-A-Account'">Creat Account</button>
+    </div>
+</div>
+
+</body>   
+<div class="intro">   
  <img class="intro-image" src="./images/airsoft-3165133_1280.webp" alt="Picture of a solider holding a gun" height="auto" width="1450" />   
  <h1 class="intro-header">SPEKARMS</h1>
  <button class="intro-button">Shop All</button>
